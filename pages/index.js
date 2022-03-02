@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useWeb3 } from '@3rdweb/hooks'
 import Dashboard from './Dashboard'
 
+
 export default function Home() {
 
   const { address, connectWallet } = useWeb3()
@@ -47,8 +48,8 @@ const WalletConnect = styled.div`
 const Button = styled.div`
   border: 1px solid #282b2f;
   padding: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   border-radius: .4rem;
   background-color: #3773f5;
   color: #000;
@@ -59,9 +60,9 @@ const Button = styled.div`
 `
 
 const Details = styled.div`
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #282b2f;
 `
