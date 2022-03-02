@@ -6,32 +6,60 @@ import Coin from "./Coin";
 
 const Portfolio = () => {
     return <Wrapper>
+        <Content>
         <PortfolioTable>
+          <TableItem>
+            <Title>Your Assets</Title>
+          </TableItem>
+          <Divider />
+          <Table>
             <TableItem>
-                <Title>Your Assets</Title>
+              <TableRow>
+                <div style={{ flex: 3 }}>Name</div>
+                <div style={{ flex: 2 }}>Balance</div>
+                <div style={{ flex: 1 }}>Price</div>
+                <div style={{ flex: 1 }}>Allocation</div>
+                <div style={{ flex: 0 }}> <BsThreeDotsVertical /> </div>
+              </TableRow>
             </TableItem>
             <Divider />
-            <Table>
-                <TableItem>
-                    <TableRow>
-                        <div style={{ flex: 3 }}>Name</div>
-                        <div style={{ flex: 2 }}>Balance</div>
-                        <div style={{ flex: 1 }}>Price</div>
-                        <div style={{ flex: 1 }}>Allocation</div>
-                        <div style={{ flex: 0 }}> <BsThreeDotsVertical /> </div>
-                    </TableRow>
-                </TableItem>
-                <Divider />
-                <div>
-                    {coins.map(coin =>(
-                        <div key={coin}>
-                            <Coin coin={coin} />
-                            <Divider />
-                        </div>
-                    ))}
+            <div>
+              {coins.map(coin => (
+                <div key={coin}>
+                  <Coin coin={coin} />
+                  <Divider />
                 </div>
-            </Table>
+              ))}
+            </div>
+          </Table>
         </PortfolioTable>
+        <PortfolioTable>
+          <TableItem>
+            <Title>Your Assets</Title>
+          </TableItem>
+          <Divider />
+          <Table>
+            <TableItem>
+              <TableRow>
+                <div style={{ flex: 3 }}>Name</div>
+                <div style={{ flex: 2 }}>Balance</div>
+                <div style={{ flex: 1 }}>Price</div>
+                <div style={{ flex: 1 }}>Allocation</div>
+                <div style={{ flex: 0 }}> <BsThreeDotsVertical /> </div>
+              </TableRow>
+            </TableItem>
+            <Divider />
+            <div>
+              {coins.map(coin => (
+                <div key={coin}>
+                  <Coin coin={coin} />
+                  <Divider />
+                </div>
+              ))}
+            </div>
+          </Table>
+        </PortfolioTable>
+        </Content>
     </Wrapper>
 };
 
@@ -43,7 +71,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Main = styled.div`
+const Content = styled.div`
   width: 100%;
   max-width: 1000px;
   padding: 2rem 1rem;
@@ -76,6 +104,6 @@ const Divider = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
 `;
